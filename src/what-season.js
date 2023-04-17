@@ -18,7 +18,7 @@ function getSeason(date) {
     return 'Unable to determine the time of year!';
   }
 
-  if(!Date.parse(date)) {
+  if(!Date.parse(date) || Object.getOwnPropertyNames(date).length > 0) {
     throw new Error('Invalid date!');
   }
 
